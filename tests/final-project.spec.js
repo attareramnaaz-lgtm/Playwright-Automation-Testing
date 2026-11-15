@@ -4,7 +4,7 @@ import { users } from '../test-data/users.js';
 
 import { products } from '../test-data/products.js';
 
-import { checkoutData } from '../test-data/checkoutdata.js';
+import { checkoutData } from '../test-data/checkoutData.js';
 
 
 test(
