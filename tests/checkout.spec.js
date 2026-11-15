@@ -94,4 +94,10 @@ test('Complete checkout journey', async ({ page }) => {
     ).toHaveText(
         'Thank you for your order!'
     );
+
+    // Capture checkout confirmation
+    await page.screenshot({
+    path: 'screenshots/checkout-success.png',
+    fullPage: true
+});
 });

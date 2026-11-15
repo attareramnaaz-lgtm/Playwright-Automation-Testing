@@ -33,4 +33,9 @@ test('Add product to cart', async ({ page }) => {
 
     await expect(inventoryPage.cartBadge)
         .toHaveText('1');
+
+await page.screenshot({
+    path: 'screenshots/products.png',
+    fullPage: true
+});
 });

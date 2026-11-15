@@ -16,6 +16,10 @@ test('Valid login', async ({ page }) => {
         users.validUser.username,
         users.validUser.password
     );
+    await page.screenshot({
+    path: 'screenshots/login-page.png',
+    fullPage: true
+});
 
     await expect(page)
         .toHaveURL(/inventory.html/);
@@ -56,4 +60,10 @@ test('Locked user login', async ({ page }) => {
 
     await expect(loginPage.errorMessage)
         .toContainText('locked out');
+
+     // Capture products page screenshot
+    await page.screenshot({
+        path: 'screenshots/locked-user.png',
+        fullPage: true
+    });
 });
