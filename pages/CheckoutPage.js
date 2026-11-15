@@ -6,6 +6,9 @@ export class CheckoutPage {
 
         this.page = page;
 
+        this.pageTitle =
+            page.locator('.title');
+
         this.firstName =
             page.locator('#first-name');
 
@@ -34,6 +37,9 @@ export class CheckoutPage {
         lastName,
         postalCode
     ) {
+
+        await expect(this.pageTitle)
+            .toHaveText('Checkout: Your Information');
 
         await this.firstName.fill(firstName);
         await expect(this.firstName).toHaveValue(firstName);
